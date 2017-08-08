@@ -91,7 +91,6 @@ public class FileLogger {
     private static boolean isExternalWritable() {
         String state = Environment.getExternalStorageState();
         return Environment.MEDIA_MOUNTED.equals(state);
-
     }
 
     private static File getWritableFile(Context context, LogFile fileName, boolean onSdCard) {
