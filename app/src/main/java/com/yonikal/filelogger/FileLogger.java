@@ -1,7 +1,6 @@
 package com.yonikal.filelogger;
 
 import android.content.Context;
-import android.location.Location;
 import android.os.Environment;
 
 import java.io.File;
@@ -23,13 +22,6 @@ public class FileLogger {
     public static void addLog(LogFile fileName, Context context, Class<?> clazz, String logLine) {
         if (DEBUG_TO_LOG_FILE) {
             Log log = new Log(clazz, logLine);
-            addLog(fileName, context, log);
-        }
-    }
-
-    public static void addLog(LogFile fileName, Context context, Class<?> clazz, String logLine, Location location) {
-        if (DEBUG_TO_LOG_FILE) {
-            Log log = new Log(clazz, logLine, location);
             addLog(fileName, context, log);
         }
     }
